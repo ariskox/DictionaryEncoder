@@ -31,7 +31,7 @@ class DictionaryEncoder: Encoder {
         }
     }
     private var dictionary: [String: Any] = [:]
-    private var array: [Any] = []
+    private var array: [Any?] = []
     private var singleValue: Any?
 
     func container<Key>(keyedBy type: Key.Type) -> KeyedEncodingContainer<Key> where Key : CodingKey {

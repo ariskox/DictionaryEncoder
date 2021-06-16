@@ -16,6 +16,8 @@
 		0257837F267A6D5900AC9C5C /* UnkeyedValuesEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02578379267A6D5800AC9C5C /* UnkeyedValuesEncoder.swift */; };
 		02578380267A6D5900AC9C5C /* SingleValueEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0257837A267A6D5900AC9C5C /* SingleValueEncoder.swift */; };
 		02578389267A6E5F00AC9C5C /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02578388267A6E5F00AC9C5C /* Person.swift */; };
+		726AC4CB267A94A700CE9B51 /* KeyedValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726AC4CA267A94A700CE9B51 /* KeyedValues.swift */; };
+		726AC4CD267A966400CE9B51 /* UnkeyedValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726AC4CC267A966400CE9B51 /* UnkeyedValues.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +43,8 @@
 		02578379267A6D5800AC9C5C /* UnkeyedValuesEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnkeyedValuesEncoder.swift; sourceTree = "<group>"; };
 		0257837A267A6D5900AC9C5C /* SingleValueEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleValueEncoder.swift; sourceTree = "<group>"; };
 		02578388267A6E5F00AC9C5C /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		726AC4CA267A94A700CE9B51 /* KeyedValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyedValues.swift; sourceTree = "<group>"; };
+		726AC4CC267A966400CE9B51 /* UnkeyedValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnkeyedValues.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				02578388267A6E5F00AC9C5C /* Person.swift */,
+				726AC4CA267A94A700CE9B51 /* KeyedValues.swift */,
+				726AC4CC267A966400CE9B51 /* UnkeyedValues.swift */,
 				02578361267A6D3F00AC9C5C /* DictionaryEncoderTests.swift */,
 				02578363267A6D3F00AC9C5C /* Info.plist */,
 			);
@@ -226,7 +232,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				02578389267A6E5F00AC9C5C /* Person.swift in Sources */,
+				726AC4CB267A94A700CE9B51 /* KeyedValues.swift in Sources */,
 				02578362267A6D3F00AC9C5C /* DictionaryEncoderTests.swift in Sources */,
+				726AC4CD267A966400CE9B51 /* UnkeyedValues.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

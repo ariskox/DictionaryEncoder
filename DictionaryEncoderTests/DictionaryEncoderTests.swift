@@ -42,4 +42,75 @@ class DictionaryEncoderTests: XCTestCase {
         XCTAssertEqual(resultAddress["city"] as? String, "Athens")
 
     }
+
+    func testKeyedValueContainerTypes() throws {
+        let values = KeyedValues(boolValue: true,
+                                 doubleValue: 2,
+                                 floatValue: 3,
+                                 intValue: 1,
+                                 int8Value: 8,
+                                 int16Value: 16,
+                                 int32Value: 32,
+                                 int64Value: 64,
+                                 uIntValue: 1,
+                                 uInt8Value: 8,
+                                 uInt16Value: 16,
+                                 uInt32Value: 32,
+                                 uInt64Value: 64)
+
+        let enc = DictionaryEncoder()
+        try values.encode(to: enc)
+
+        let resultValues = try XCTUnwrap(enc.result as? [String: Any])
+
+        XCTAssertEqual(resultValues["boolValue"] as? Bool, true)
+        XCTAssertEqual(resultValues["doubleValue"] as? Double, 2)
+        XCTAssertEqual(resultValues["floatValue"] as? Float, 3)
+        XCTAssertEqual(resultValues["intValue"] as? Int, 1)
+        XCTAssertEqual(resultValues["int8Value"] as? Int8, 8)
+        XCTAssertEqual(resultValues["int16Value"] as? Int16, 16)
+        XCTAssertEqual(resultValues["int32Value"] as? Int32, 32)
+        XCTAssertEqual(resultValues["int64Value"] as? Int64, 64)
+        XCTAssertEqual(resultValues["uIntValue"] as? UInt, 1)
+        XCTAssertEqual(resultValues["uInt8Value"] as? UInt8, 8)
+        XCTAssertEqual(resultValues["uInt16Value"] as? UInt16, 16)
+        XCTAssertEqual(resultValues["uInt32Value"] as? UInt32, 32)
+        XCTAssertEqual(resultValues["uInt64Value"] as? UInt64, 64)
+    }
+
+    func testUnkeyedValueContainerTypes() throws {
+        let values = UnkeyedValues(boolValue: [true, false],
+                                   doubleValue: [2, 3],
+                                   floatValue: [3, 4],
+                                   intValue: [1, 2],
+                                   int8Value: [8, 9],
+                                   int16Value: [16, 17],
+                                   int32Value: [32, 33],
+                                   int64Value: [64, 65],
+                                   uIntValue: [1, 2],
+                                   uInt8Value: [8, 9],
+                                   uInt16Value: [16, 17],
+                                   uInt32Value: [32, 33],
+                                   uInt64Value: [64, 65])
+
+        let enc = DictionaryEncoder()
+        try values.encode(to: enc)
+
+        let resultValues = try XCTUnwrap(enc.result as? [String: Any])
+
+        XCTAssertEqual(resultValues["boolValue"] as? [Bool], [true, false])
+        XCTAssertEqual(resultValues["doubleValue"] as? [Double], [2, 3])
+        XCTAssertEqual(resultValues["floatValue"] as? [Float], [3, 4])
+        XCTAssertEqual(resultValues["intValue"] as? [Int], [1, 2])
+        XCTAssertEqual(resultValues["int8Value"] as? [Int8], [8, 9])
+        XCTAssertEqual(resultValues["int16Value"] as? [Int16], [16, 17])
+        XCTAssertEqual(resultValues["int32Value"] as? [Int32], [32, 33])
+        XCTAssertEqual(resultValues["int64Value"] as? [Int64], [64, 65])
+        XCTAssertEqual(resultValues["uIntValue"] as? [UInt], [1, 2])
+        XCTAssertEqual(resultValues["uInt8Value"] as? [UInt8], [8, 9])
+        XCTAssertEqual(resultValues["uInt16Value"] as? [UInt16], [16, 17])
+        XCTAssertEqual(resultValues["uInt32Value"] as? [UInt32], [32, 33])
+        XCTAssertEqual(resultValues["uInt64Value"] as? [UInt64], [64, 65])
+
+    }
 }
