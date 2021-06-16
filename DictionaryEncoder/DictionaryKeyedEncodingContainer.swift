@@ -8,6 +8,8 @@
 import Foundation
 
 struct DictionaryKeyedEncodingContainer<K : CodingKey> : KeyedEncodingContainerProtocol {
+    typealias Key = K
+
     var codingPath: [CodingKey] = []
 
     private var onChange: ( [String: Any] ) -> ()
@@ -103,6 +105,4 @@ struct DictionaryKeyedEncodingContainer<K : CodingKey> : KeyedEncodingContainerP
     mutating func superEncoder(forKey key: K) -> Encoder {
         fatalError()
     }
-
-    typealias Key = K
 }
