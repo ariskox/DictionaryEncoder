@@ -15,9 +15,9 @@ struct SingleValueEncoder: SingleValueEncodingContainer {
             onChange(result)
         }
     }
-    private var onChange: (Any) -> ()
+    private var onChange: (Any?) -> ()
 
-    init(onChange: @escaping (Any) -> ()) {
+    init(onChange: @escaping (Any?) -> ()) {
         self.onChange = onChange
     }
 

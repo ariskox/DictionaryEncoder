@@ -13,14 +13,14 @@ struct UnkeyedValuesEncoder: UnkeyedEncodingContainer {
 
     var count: Int = 0
 
-    private(set) var result: [Any] = [] {
+    private(set) var result: [Any?] = [] {
         didSet {
             onChange(result)
         }
     }
-    private var onChange: ([Any]) -> ()
+    private var onChange: ([Any?]) -> ()
 
-    init(onChange: @escaping ([Any]) -> ()) {
+    init(onChange: @escaping ([Any?]) -> ()) {
         self.onChange = onChange
     }
 
