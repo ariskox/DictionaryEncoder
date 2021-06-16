@@ -38,7 +38,7 @@ class DictionaryEncoder: Encoder {
         mode = .keyedContainer
         let c = DictionaryKeyedEncodingContainer<Key>(onChange: { dict in
             self.dictionary.merge(dict, uniquingKeysWith: { _, second in
-                                    return second
+                return second
             })
         })
         return KeyedEncodingContainer<Key>.init(c)
