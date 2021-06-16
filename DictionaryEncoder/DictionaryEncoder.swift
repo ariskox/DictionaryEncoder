@@ -32,12 +32,14 @@ class DictionaryEncoder: Encoder {
     }
     private var dictionary: [String: Any] = [:]
     private var array: [Any] = []
-    private var singleValue: Any? = nil
+    private var singleValue: Any?
 
     func container<Key>(keyedBy type: Key.Type) -> KeyedEncodingContainer<Key> where Key : CodingKey {
         mode = .keyedContainer
         let c = DictionaryKeyedEncodingContainer<Key>(onChange: { dict in
-            self.dictionary.merge(dict, uniquingKeysWith: { first, second in  return second })
+            self.dictionary.merge(dict, uniquingKeysWith: { first, second in
+                                    return second
+            })
         })
         return KeyedEncodingContainer<Key>.init(c)
     }
@@ -52,6 +54,7 @@ class DictionaryEncoder: Encoder {
     func singleValueContainer() -> SingleValueEncodingContainer {
         mode = .singleValueContainer
         return SingleValueEncoder(onChange: { value in
+            assert(self.singleValue == nil)
             self.singleValue = value
         })
     }
