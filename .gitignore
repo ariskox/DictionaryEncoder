@@ -1,4 +1,5 @@
 # Custom
+.build
 Frameworks/MPulse.framework/
 swiftlint.log
 same-targets.log
