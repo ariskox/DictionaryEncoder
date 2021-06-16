@@ -1,5 +1,6 @@
 language:
   - swift
+os: osx
 osx_image: xcode12.4
 script:
   - xcodebuild -scheme DictionaryEncoder -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 12' build test
