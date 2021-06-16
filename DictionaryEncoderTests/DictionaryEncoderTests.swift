@@ -24,7 +24,6 @@ class DictionaryEncoderTests: XCTestCase {
         let enc = DictionaryEncoder()
         try person.encode(to: enc)
 
-
         // Then
         let resultPerson = try XCTUnwrap(enc.result as? [String: Any])
         let resultAddress = try XCTUnwrap(resultPerson["address"] as? [String: Any])
