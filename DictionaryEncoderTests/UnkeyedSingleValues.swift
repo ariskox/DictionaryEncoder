@@ -1,5 +1,5 @@
 //
-//  UnkeyedValues.swift
+//  UnkeyedSingleValues.swift
 //  DictionaryEncoderTests
 //
 //  Created by Aris Koxaras on 16/6/21.
@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct UnkeyedValues: Encodable {
+struct UnkeyedSingleValues: Encodable {
+    var stringValue: [String]
     var boolValue: [Bool]
     var doubleValue: [Double]
     var floatValue: [Float]

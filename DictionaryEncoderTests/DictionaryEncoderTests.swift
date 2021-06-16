@@ -78,26 +78,28 @@ class DictionaryEncoderTests: XCTestCase {
         XCTAssertEqual(resultValues["uInt64Value"] as? UInt64, 64)
     }
 
-    func testUnkeyedValueContainerTypes() throws {
-        let values = UnkeyedValues(boolValue: [true, false],
-                                   doubleValue: [2, 3],
-                                   floatValue: [3, 4],
-                                   intValue: [1, 2],
-                                   int8Value: [8, 9],
-                                   int16Value: [16, 17],
-                                   int32Value: [32, 33],
-                                   int64Value: [64, 65],
-                                   uIntValue: [1, 2],
-                                   uInt8Value: [8, 9],
-                                   uInt16Value: [16, 17],
-                                   uInt32Value: [32, 33],
-                                   uInt64Value: [64, 65])
+    func testSingleValueContainerTypes() throws {
+        let values = UnkeyedSingleValues(stringValue: ["a","b"],
+                                         boolValue: [true, false],
+                                         doubleValue: [2, 3],
+                                         floatValue: [3, 4],
+                                         intValue: [1, 2],
+                                         int8Value: [8, 9],
+                                         int16Value: [16, 17],
+                                         int32Value: [32, 33],
+                                         int64Value: [64, 65],
+                                         uIntValue: [1, 2],
+                                         uInt8Value: [8, 9],
+                                         uInt16Value: [16, 17],
+                                         uInt32Value: [32, 33],
+                                         uInt64Value: [64, 65])
 
         let enc = DictionaryEncoder()
         try values.encode(to: enc)
 
         let resultValues = try XCTUnwrap(enc.result as? [String: Any])
 
+        XCTAssertEqual(resultValues["stringValue"] as? [String], ["a", "b"])
         XCTAssertEqual(resultValues["boolValue"] as? [Bool], [true, false])
         XCTAssertEqual(resultValues["doubleValue"] as? [Double], [2, 3])
         XCTAssertEqual(resultValues["floatValue"] as? [Float], [3, 4])
@@ -111,6 +113,5 @@ class DictionaryEncoderTests: XCTestCase {
         XCTAssertEqual(resultValues["uInt16Value"] as? [UInt16], [16, 17])
         XCTAssertEqual(resultValues["uInt32Value"] as? [UInt32], [32, 33])
         XCTAssertEqual(resultValues["uInt64Value"] as? [UInt64], [64, 65])
-
     }
 }

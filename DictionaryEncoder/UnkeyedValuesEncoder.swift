@@ -29,55 +29,55 @@ struct UnkeyedValuesEncoder: UnkeyedEncodingContainer {
     }
 
     mutating func encode(_ value: String) throws {
-        result.append(value)
+        fatalError()
     }
 
     mutating func encode(_ value: Double) throws {
-        result.append(value)
+        fatalError()
     }
 
     mutating func encode(_ value: Float) throws {
-        result.append(value)
+        fatalError()
     }
 
     mutating func encode(_ value: Int) throws {
-        result.append(value)
+        fatalError()
     }
 
     mutating func encode(_ value: Int8) throws {
-        result.append(value)
+        fatalError()
     }
 
     mutating func encode(_ value: Int16) throws {
-        result.append(value)
+        fatalError()
     }
 
     mutating func encode(_ value: Int32) throws {
-        result.append(value)
+        fatalError()
     }
 
     mutating func encode(_ value: Int64) throws {
-        result.append(value)
+        fatalError()
     }
 
     mutating func encode(_ value: UInt) throws {
-        result.append(value)
+        fatalError()
     }
 
     mutating func encode(_ value: UInt8) throws {
-        result.append(value)
+        fatalError()
     }
 
     mutating func encode(_ value: UInt16) throws {
-        result.append(value)
+        fatalError()
     }
 
     mutating func encode(_ value: UInt32) throws {
-        result.append(value)
+        fatalError()
     }
 
     mutating func encode(_ value: UInt64) throws {
-        result.append(value)
+        fatalError()
     }
 
     mutating func encode<T>(_ value: T) throws where T : Encodable {
@@ -87,7 +87,7 @@ struct UnkeyedValuesEncoder: UnkeyedEncodingContainer {
     }
 
     mutating func encode(_ value: Bool) throws {
-        result.append(value)
+        fatalError()
     }
 
     mutating func nestedContainer<NestedKey>(keyedBy keyType: NestedKey.Type) -> KeyedEncodingContainer<NestedKey> where NestedKey : CodingKey {
