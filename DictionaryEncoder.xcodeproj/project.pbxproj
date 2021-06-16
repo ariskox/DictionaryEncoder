@@ -10,6 +10,12 @@
 		0257835D267A6D3F00AC9C5C /* DictionaryEncoder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02578353267A6D3F00AC9C5C /* DictionaryEncoder.framework */; };
 		02578362267A6D3F00AC9C5C /* DictionaryEncoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02578361267A6D3F00AC9C5C /* DictionaryEncoderTests.swift */; };
 		02578364267A6D3F00AC9C5C /* DictionaryEncoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 02578356267A6D3F00AC9C5C /* DictionaryEncoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0257837B267A6D5900AC9C5C /* DictionaryEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02578375267A6D5800AC9C5C /* DictionaryEncoder.swift */; };
+		0257837C267A6D5900AC9C5C /* DictionaryKeyedEncodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02578376267A6D5800AC9C5C /* DictionaryKeyedEncodingContainer.swift */; };
+		0257837D267A6D5900AC9C5C /* DicionaryEncoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 02578377267A6D5800AC9C5C /* DicionaryEncoder.h */; };
+		0257837F267A6D5900AC9C5C /* UnkeyedValuesEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02578379267A6D5800AC9C5C /* UnkeyedValuesEncoder.swift */; };
+		02578380267A6D5900AC9C5C /* SingleValueEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0257837A267A6D5900AC9C5C /* SingleValueEncoder.swift */; };
+		02578389267A6E5F00AC9C5C /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02578388267A6E5F00AC9C5C /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +35,12 @@
 		0257835C267A6D3F00AC9C5C /* DictionaryEncoderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DictionaryEncoderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		02578361267A6D3F00AC9C5C /* DictionaryEncoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryEncoderTests.swift; sourceTree = "<group>"; };
 		02578363267A6D3F00AC9C5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02578375267A6D5800AC9C5C /* DictionaryEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryEncoder.swift; sourceTree = "<group>"; };
+		02578376267A6D5800AC9C5C /* DictionaryKeyedEncodingContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryKeyedEncodingContainer.swift; sourceTree = "<group>"; };
+		02578377267A6D5800AC9C5C /* DicionaryEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DicionaryEncoder.h; sourceTree = "<group>"; };
+		02578379267A6D5800AC9C5C /* UnkeyedValuesEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnkeyedValuesEncoder.swift; sourceTree = "<group>"; };
+		0257837A267A6D5900AC9C5C /* SingleValueEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleValueEncoder.swift; sourceTree = "<group>"; };
+		02578388267A6E5F00AC9C5C /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +83,11 @@
 		02578355267A6D3F00AC9C5C /* DictionaryEncoder */ = {
 			isa = PBXGroup;
 			children = (
+				02578377267A6D5800AC9C5C /* DicionaryEncoder.h */,
+				02578375267A6D5800AC9C5C /* DictionaryEncoder.swift */,
+				02578376267A6D5800AC9C5C /* DictionaryKeyedEncodingContainer.swift */,
+				0257837A267A6D5900AC9C5C /* SingleValueEncoder.swift */,
+				02578379267A6D5800AC9C5C /* UnkeyedValuesEncoder.swift */,
 				02578356267A6D3F00AC9C5C /* DictionaryEncoder.h */,
 				02578357267A6D3F00AC9C5C /* Info.plist */,
 			);
@@ -80,6 +97,7 @@
 		02578360267A6D3F00AC9C5C /* DictionaryEncoderTests */ = {
 			isa = PBXGroup;
 			children = (
+				02578388267A6E5F00AC9C5C /* Person.swift */,
 				02578361267A6D3F00AC9C5C /* DictionaryEncoderTests.swift */,
 				02578363267A6D3F00AC9C5C /* Info.plist */,
 			);
@@ -93,6 +111,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0257837D267A6D5900AC9C5C /* DicionaryEncoder.h in Headers */,
 				02578364267A6D3F00AC9C5C /* DictionaryEncoder.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,6 +166,7 @@
 				TargetAttributes = {
 					02578352267A6D3F00AC9C5C = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 					0257835B267A6D3F00AC9C5C = {
 						CreatedOnToolsVersion = 12.4;
@@ -194,6 +214,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02578380267A6D5900AC9C5C /* SingleValueEncoder.swift in Sources */,
+				0257837B267A6D5900AC9C5C /* DictionaryEncoder.swift in Sources */,
+				0257837F267A6D5900AC9C5C /* UnkeyedValuesEncoder.swift in Sources */,
+				0257837C267A6D5900AC9C5C /* DictionaryKeyedEncodingContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,6 +225,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02578389267A6E5F00AC9C5C /* Person.swift in Sources */,
 				02578362267A6D3F00AC9C5C /* DictionaryEncoderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,6 +366,7 @@
 		02578368267A6D3F00AC9C5C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = VLPM2772QL;
@@ -357,6 +383,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.vodafonegr.DictionaryEncoder;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,6 +392,7 @@
 		02578369267A6D3F00AC9C5C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = VLPM2772QL;
@@ -389,6 +417,7 @@
 		0257836B267A6D3F00AC9C5C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VLPM2772QL;
 				INFOPLIST_FILE = DictionaryEncoderTests/Info.plist;
@@ -407,6 +436,7 @@
 		0257836C267A6D3F00AC9C5C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VLPM2772QL;
 				INFOPLIST_FILE = DictionaryEncoderTests/Info.plist;
