@@ -26,10 +26,12 @@ struct Address: Encodable {
 enum MaritalStatus: Encodable {
     case single
     case married(Spouse)
+    case divorced
 
     enum CodingKeys: CodingKey {
         case single
         case married
+        case divorced
     }
 
     func encode(to encoder: Encoder) throws {
@@ -39,6 +41,8 @@ enum MaritalStatus: Encodable {
             try container.encode(1, forKey: .single)
         case .married(let spouse):
             try container.encode(spouse, forKey: .married)
+        case .divorced:
+            try container.encode(1, forKey: .divorced)
         }
     }
 
