@@ -46,6 +46,18 @@ enum MaritalStatus: Encodable {
         }
     }
 
+    func encode1(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        switch self {
+        case .single:
+            try container.encode(1, forKey: .single)
+        case .married(let spouse):
+            try container.encode(spouse, forKey: .married)
+        case .divorced:
+            try container.encode(1, forKey: .divorced)
+        }
+    }
+
 }
 
 struct Spouse: Encodable {
