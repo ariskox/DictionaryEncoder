@@ -18,6 +18,7 @@
 		02578389267A6E5F00AC9C5C /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02578388267A6E5F00AC9C5C /* Person.swift */; };
 		726AC4CB267A94A700CE9B51 /* KeyedValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726AC4CA267A94A700CE9B51 /* KeyedValues.swift */; };
 		726AC4CD267A966400CE9B51 /* UnkeyedSingleValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726AC4CC267A966400CE9B51 /* UnkeyedSingleValues.swift */; };
+		72D869BA27C183EF005CC858 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D869B927C183EF005CC858 /* File.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		02578388267A6E5F00AC9C5C /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		726AC4CA267A94A700CE9B51 /* KeyedValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyedValues.swift; sourceTree = "<group>"; };
 		726AC4CC267A966400CE9B51 /* UnkeyedSingleValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnkeyedSingleValues.swift; sourceTree = "<group>"; };
+		72D869B927C183EF005CC858 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 			children = (
 				02578377267A6D5800AC9C5C /* DicionaryEncoder.h */,
 				02578375267A6D5800AC9C5C /* DictionaryEncoder.swift */,
+				72D869B927C183EF005CC858 /* File.swift */,
 				02578376267A6D5800AC9C5C /* DictionaryKeyedEncodingContainer.swift */,
 				0257837A267A6D5900AC9C5C /* SingleValueEncoder.swift */,
 				02578379267A6D5800AC9C5C /* UnkeyedValuesEncoder.swift */,
@@ -220,6 +223,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72D869BA27C183EF005CC858 /* File.swift in Sources */,
 				02578380267A6D5900AC9C5C /* SingleValueEncoder.swift in Sources */,
 				0257837B267A6D5900AC9C5C /* DictionaryEncoder.swift in Sources */,
 				0257837F267A6D5900AC9C5C /* UnkeyedValuesEncoder.swift in Sources */,

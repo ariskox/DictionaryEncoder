@@ -46,13 +46,3 @@ enum MaritalStatus: Encodable {
         }
     }
 }
-
-struct Spouse: Encodable {
-    var name: String
-    var surname: String
-    var test: String?
-
-    var aVariable: String {
-        return "\(test)"
-    }
-}
